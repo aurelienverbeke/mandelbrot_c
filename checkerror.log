@@ -1,0 +1,20 @@
+Vérification de la syntaxe pour complexe.h :
+gcc -std=c99 -c -Wall -Wextra -pedantic -Werror -fsyntax-only -x c complexe.h
+Vérification de la syntaxe pour complexe.c :
+gcc -std=c99 -c -Wall -Wextra -pedantic -Werror -fsyntax-only -x c complexe.c
+Vérification de la syntaxe pour mandelbrot.c :
+gcc -std=c99 -c -Wall -Wextra -pedantic -Werror -fsyntax-only -x c mandelbrot.c
+mandelbrot.c: In function ‘mandelbrot’:
+mandelbrot.c:19:27: error: unused parameter ‘z0’ [-Werror=unused-parameter]
+   19 | int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
+      |                ~~~~~~~~~~~^~
+mandelbrot.c:19:42: error: unused parameter ‘c’ [-Werror=unused-parameter]
+   19 | int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
+      |                               ~~~~~~~~~~~^
+mandelbrot.c:19:52: error: unused parameter ‘seuil’ [-Werror=unused-parameter]
+   19 | int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
+      |                                             ~~~~~~~^~~~~
+mandelbrot.c:19:63: error: unused parameter ‘maxit’ [-Werror=unused-parameter]
+   19 | int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
+      |                                                           ~~~~^~~~~
+cc1: all warnings being treated as errors
